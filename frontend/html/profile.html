@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="../js/profile.js" defer></script>
+
+    <style>
+        .image_box{
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .image_box img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="profile_box my-10 mx-8">
+        <div class="image_box shadow-lg border">
+            <img alt="img" id="image">
+        </div>
+
+        <h1 id="userName" class="mt-5 font-bold text-[25px] pb-3 border-b-2 w-[35%] border-b-gray-500" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></h1>
+
+        <h3 class="mt-2 mb-3 underline">CONTACT INFORMATION</h3>
+
+        <p id="email" class="text-[16px] mb-2"></p>
+        <p id="phone" class="text-[16px] mb-2"></p>
+        <p id="address" class="text-[16px] mb-2"></p>
+
+        <h3 class="mb-3 mt-5 underline">BASIC INFORMATION</h3>
+
+        <p id="gender" class="text-[16px] mb-2"></p>
+        <p id="birthday" class="text-[16px] mb-6"></p>
+
+        <a id="edit_btn" class="border border-blue-500 py-1 px-8 rounded-full hover:bg-blue-500 hover:text-white cursor-pointer transition duration-500">Edit</a>
+    </div>
+</body>
+</html>

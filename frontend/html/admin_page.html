@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="../js/admin_page.js" defer></script>
+
+</head>
+<body class="bg-white">
+    <div id="navbar-placeholder"></div>
+
+    <div class="flex" id="main_box">
+        <div class="list_box w-20 md:w-80 max-xl:100">
+            <div class=" px-3 text-left ps-4 py-2 cursor-pointer hover:bg-blue-200 transition duration-300 hover:border-e-3 hover:border-blue-500" id="dashboard">
+                <i class="bi bi-house-door text-[25px] me-2"></i><small class="text-[18px] text-gray-600 hidden md:inline">Dashboard</small>
+            </div>
+            <div class=" px-3 hover:bg-blue-200 transition duration-300 hover:border-e-3 hover:border-blue-500 cursor-pointer text-left ps-4 py-2" id="appointment"><i class="bi bi-calendar2-week text-[25px] me-2"></i><small class="text-[18px] text-gray-600 hidden md:inline">Appointments</small></div>
+            <div class=" px-3 hover:bg-blue-200 transition duration-300 hover:border-e-3 hover:border-blue-500 cursor-pointer text-left ps-4 py-2" id="add"><i class="bi bi-plus-square text-[25px] me-2"></i><small class="text-[18px] text-gray-600 hidden md:inline">Add Doctor</small></div>
+            <div class=" px-3 hover:bg-blue-200 transition duration-300 hover:border-e-3 hover:border-blue-500 cursor-pointer text-left ps-4 py-2" id="add_schedule"><i class="bi bi-alarm text-[25px] me-2"></i><small class="text-[18px] text-gray-600 hidden md:inline">Add Doctor's Schedule</small></div>
+            <div class=" px-3 hover:bg-blue-200 transition duration-300 hover:border-e-3 hover:border-blue-500 cursor-pointer text-left ps-4 py-2" id="doc_list"><i class="fa-solid fa-user-doctor text-[25px] me-2"></i><small class="text-[18px] text-gray-600 hidden md:inline">Doctors list</small></div>
+            <div class=" px-3 hover:bg-blue-200 transition duration-300 hover:border-e-3 hover:border-blue-500 cursor-pointer text-left ps-4 py-2" id="user_list"><i class="fa-solid fa-users text-[25px] me-2"></i><small class="text-[18px] text-gray-600 hidden md:inline">Users</small></div>
+        </div>
+
+        <div class="p-2 w-[100%] bg-blue-50" id="show_box">
+            <div id="page1">
+                <div class="flex flex-wrap gap-6 px-5 py-3" id="home_page1">
+                    <div class="p-4 bg-white w-[230px] flex gap-5">
+                        <img src="../images/doctor_icon.png" alt="doc_icon" width="70">
+                        <div>
+                            <h1 id="total_doc"></h1>
+                            <h1 class="text-gray-600 font-bold text-[18px]">Doctors</h1>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-white w-[240px] flex gap-5">
+                        <img src="../images/360-3605155_img-appointment-icon.png" alt="appointment_icon" width="70">
+                        <div>
+                            <h1 id="total_appointment"></h1>
+                            <h1 class="text-gray-600 font-bold text-[18px]">Appointments</h1>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-white w-[230px] flex gap-5">
+                        <img src="../images/user_4361609.png" alt="appointment_icon" width="70">
+                        <div>
+                            <h1 id="total_patients"></h1>
+                            <h1 class="text-gray-600 font-bold text-[18px]">Patients</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" bg-white sm:w-[60%] ms-5 mt-5 mb-5" id="home_page2">
+                    <div id="label" class="border-b-2 border-gray-300 py-3 px-5 flex items-center gap-4">
+                        <img src="../images/timetable_10760786.png" alt="lable" width="35">
+                        <h1 class="font-bold text-[18px] text-gray-600">Latest Bookings</h1>
+                    </div>
+
+                    <div id="latest"></div>
+                </div>
+            </div>
+
+            <div id="page2" class="hidden">
+                
+            </div>
+
+            <div id="page3" class="hidden">
+                <form class="p-3">
+                    <label for="image">upload image</label>
+                    <input type="file" name="image" accept="image/*" id="image" class="border mt-2 border-gray-400 p-2 w-[100%] md:w-[300px] md:ms-3 md:mt-0">
+
+                    <div id="name_sec" class="mt-3 flex flex-wrap gap-6">
+                        <div class="w-[100%] sm:w-[40%]">
+                            <label for="name">Doctor's name</label>
+                            <input type="text" name="name" id="name" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3" placeholder="Name" required>
+                        </div>
+
+                        <div class=" w-[100%] sm:w-[40%]">
+                            <label for="name">Speciality</label>
+                            <select name="speciality" id="speciality" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3">
+                                <option value="1">General Physician</option>
+                                <option value="2">Gynecologist</option>
+                                <option value="3">Dermatologist</option>
+                                <option value="4">Pediatricians</option>
+                                <option value="5">Neurologist</option>
+                                <option value="6">Gastroenterologist</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="email_sec" class="mt-3 flex flex-wrap gap-6">
+                        <div class="w-[100%] sm:w-[40%]">
+                            <label for="email">Doctor Email</label>
+                            <input type="email" name="email" id="email" class="border border-gray-400 mt-1 w-[100%] rounded-slg p-2 mb-3" placeholder="***@gmail.com" required>
+                        </div>
+
+                        <div class="w-[100%] sm:w-[40%]">
+                            <label for="degree">Degree</label>
+                            <input type="text" name="degree" id="degree" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3" placeholder="MBBS" required>
+                        </div>
+                    </div>
+
+                    <div id="pwd_sec" class="mt-3 flex flex-wrap gap-6">
+                        <div class="w-[100%] sm:w-[40%]">
+                            <label for="password">Set Password</label>
+                            <input type="password" name="password" id="password" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3" placeholder="Password">
+                        </div>
+
+                        <div class="w-[100%] sm:w-[40%]">
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone" id="phone" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3" placeholder="Phone" required>
+                        </div>
+                    </div>
+
+                    <div id="exp_sec" class="mt-3 flex flex-wrap gap-6">
+                        <div class="w-[100%] sm:w-[40%]">
+                            <label for="exp">Experience</label>
+                            <select name="exp" id="exp" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3" required>
+                                <option value="1">1 year</option>
+                                <option value="2">2 years</option>
+                                <option value="3">3 years</option>
+                                <option value="4">4 years</option>
+                                <option value="5">5 years</option>
+                                <option value="6">6 years</option>
+                                <option value="7">7 years</option>
+                                <option value="8">8 years</option>
+                                <option value="9">9 years</option>
+                                <option value="10">10 years</option>
+                                <option value="11">10+ years</option>
+                            </select>
+                        </div>
+
+                        <div class="w-[100%] sm:w-[40%]">
+                            <label for="fees">Fees</label>
+                            <input type="number" id="fees" name="fees" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3" placeholder="Doctor Fees" required>
+                        </div>
+                    </div>
+
+                    <label for="hospital">Hospital</label>
+                    <div>
+                        <input type="text" id="hospital" name="hospital"
+                        class="border border-gray-400 mt-1 w-[100%] sm:w-[40%] rounded-lg p-2 mb-3" placeholder="Hospital Name " required>
+                    </div>
+
+                    <label for="about">About Doctor</label>
+                    <div>
+                        <textarea name="about" id="about" class="border border-gray-400 mt-1 w-[100%] rounded-lg p-2 mb-3 sm:w-[40%]" required>
+                            
+                        </textarea>
+                    </div>
+
+                    <input type="hidden" name="available" id="available" value="1">
+
+                    <button type="submit" class="w-[100px] mb-3 rounded-lg cursor-pointer mt-3 bg-blue-500 text-white p-2">Submit</button>
+                    <button id="doc_edit" type="button" class="w-[100px] mb-3 rounded-lg cursor-pointer mt-3 bg-green-500 text-white p-2">Edit</button>
+                </form>
+            </div>
+
+            <div id="page4" class="hidden">
+                
+            </div>
+
+            <div id="page5" class="hidden">
+                <form action="#" class="ms-4" >
+                    <h3 class="mb-6 mt-2 font-bold text-[25px]">Doctor's Schedule</h3>
+
+                    <label for="choose">Choose Doctor :</label>
+                    <select name="choose" id="choose" class="mb-6 border border-gray-500 px-2 py-1 w-50">
+                        
+                    </select>
+
+                    <div class="mb-5 sm:flex">
+                        <label class="me-3">Monday</label>
+                        <div class="mt-2 sm:mt-0">
+                            <input type="time" id="mon_time1" placeholder="Time 1" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="mon_time2" placeholder="Time 2" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="mon_time3" placeholder="Time 3" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                        </div>
+                    </div>
+
+                    <div class="mb-5 sm:flex">
+                        <label class="me-3">Tuesday</label>
+                        <div class="mt-2 sm:mt-0">
+                            <input type="time" id="tue_time1" placeholder="Time 1" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="tue_time2" placeholder="Time 2" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="tue_time3" placeholder="Time 3" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                        </div>
+                    </div>
+
+                    <div class="mb-5 sm:flex">
+                        <label class="me-3">Wednesday</label>
+                        <div class="mt-2 sm:mt-0">
+                            <input type="time" id="wed_time1" placeholder="Time 1" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="wed_time2" placeholder="Time 2" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="wed_time3" placeholder="Time 3" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                        </div>
+                    </div>
+
+                    <div class="mb-5 sm:flex">
+                        <label class="me-3">Thursday</label>
+                        <div class="mt-2 sm:mt-0">
+                            <input type="time" id="thu_time1" placeholder="Time 1" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="thu_time2" placeholder="Time 2" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="thu_time3" placeholder="Time 3" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                        </div>
+                    </div>
+
+                    <div class="mb-5 sm:flex">
+                        <label class="me-3">Friday</label>
+                        <div class="mt-2 sm:mt-0">
+                            <input type="time" id="fri_time1" placeholder="Time 1" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="fri_time2" placeholder="Time 2" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="fri_time3" placeholder="Time 3" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                        </div>
+                    </div>
+
+                    <div class="mb-5 sm:flex">
+                        <label class="me-3">Saturday</label>
+                        <div class="mt-2 sm:mt-0">
+                            <input type="time" id="sat_time1" placeholder="Time 1" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="sat_time2" placeholder="Time 2" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="sat_time3" placeholder="Time 3" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                        </div>
+                    </div>
+
+                    <div class="mb-5 sm:flex">
+                        <label class="me-3">Sunday</label>
+                        <div class="mt-2 sm:mt-0">
+                            <input type="time" id="sun_time1" placeholder="Time 1" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="sun_time2" placeholder="Time 2" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                            <input type="time" id="sun_time3" placeholder="Time 3" class="border px-3 border-gray-500 rounded-lg me-3 mb-2">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="schedule_btn" class="bg-blue-500 mt-5 text-white px-4 py-2 cursor-pointer rounded-lg hover:shadow-blue-300 hover:shadow-md">Add Schedule</button>
+
+                </form>
+            </div>
+
+            <div id="page6" class="hidden">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

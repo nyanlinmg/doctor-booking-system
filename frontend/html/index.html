@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+
+        #book:hover{
+            transform: scale(1.1);
+            transition: all 0.5s;
+        }
+
+        .doctors_list{
+            border: 2px solid rgb(146, 196, 250);
+            margin: 10px;
+            color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .doctors_list:hover{
+            transform: translateY(-10px);
+            transition: all 0.4s;
+        }
+
+        .doctors_list>a
+        >img{
+            background-color: rgba(209, 218, 255, 0.87);
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="mt-10 mb-10 bg-blue-400 w-[80%] lg:flex m-auto px-[20px] block justify-center rounded-lg shadow-lg">
+        <div class="flex flex-col justify-center lg:w-[50%] text-center lg:text-start m-auto">
+            <h1 class="font-bold text-[40px] text-white">Book Appointment With Trusted Doctors</h1>
+
+            <div class="lg:flex items-center gap-4 mt-4">
+                <img class="m-auto" src="../images/group_profiles-BCL6AVF5.png" alt="group_profile" width="100">
+                <p class="text-white text-sm">Simply browse through our extensive list of trusted doctors,schedule your appointment hassle-free.</p>
+            </div>
+
+            <div class="mt-8">
+                <button class="bg-white rounded-full px-3 py-2 cursor-pointer" id="book"><a href="#speciality">Book Appointment</a><i class="bi bi-arrow-right ms-3"></i></button>
+            </div>
+        </div>
+
+        <div>
+            <img class="m-auto" src="../images/header_img-DhAi3lLA.png" alt="doctors" width="600">
+        </div>
+    </div>
+
+    <div class="text-center" id="speciality">
+        <p class="text-[35px] font-serif font-semibold mb-3">Find by Speciality</p>
+
+        <p class="w-[30%] m-auto mb-4">Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
+
+        <div class="grid md:grid-cols-6 grid-cols-3 w-[80%] xl:w-[70%] m-auto gap-5 mb-10 mt-10 p-3">
+            <div class="hover:translate-y-[-10px] m-auto" style="transition: all 0.4s;">
+                <a href="all_doctors.html?id=1">
+                    <img src="../images/download.svg" alt="img1" width="100">
+                    <p class="text-center text-sm mt-1">General Physician</p>
+                </a>
+            </div>
+
+            <div class="hover:translate-y-[-10px] m-auto" style="transition: all 0.4s;">
+                <a href="all_doctors.html?id=2">
+                    <img src="../images/Gynecologist-Av1zZu4d.svg" alt="img2" width="100">
+                    <p class="text-center text-sm mt-1">Gynecologist</p>
+                </a>
+            </div>
+
+            <div class="hover:translate-y-[-10px] m-auto" style="transition: all 0.4s;">
+                <a href="all_doctors.html?id=3">
+                    <img src="../images/download (1).svg" alt="img3" width="100">
+                    <p class="text-center text-sm mt-1">Dermatologist</p>
+                </a>
+            </div>
+
+            <div class="hover:translate-y-[-10px] m-auto" style="transition: all 0.4s;">
+                <a href="all_doctors.html?id=4">
+                    <img src="../images/Pediatricians-C6nmx5n8.svg" alt="img4" width="100">
+                    <p class="text-center text-sm mt-1">Pediatricians</p>
+                </a>
+            </div>
+
+            <div class="hover:translate-y-[-10px] m-auto" style="transition: all 0.4s;">
+                <a href="all_doctors.html?id=5">
+                    <img src="../images/Neurologist-CuaLxNpX.svg" alt="img5" width="100">
+                    <p class="text-center text-sm mt-1">Neurologist</p>
+                </a>
+            </div>
+
+            <div class="hover:translate-y-[-10px] m-auto" style="transition: all 0.4s;">
+                <a href="all_doctors.html?id=6">
+                    <img src="../images/Gastroenterologist-CTgzRFeY.svg" alt="img6" width="100">
+                    <p class="text-center text-sm mt-1">Gastroenterologist</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-[50px] text-center">
+        <p class="font-semibold font-serif text-[30px] mt-10 mb-2">Top Doctors to Book</p>
+        <p class="mb-10">Simply browse through our extensive list of trusted doctors.</p>
+
+        <div class="mb-10 w-[100%] lg:w-[80%] m-auto lg:gap-6 grid gap-y-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 px-4" id="doctors_list">
+
+        </div>
+
+        <button class="bg-blue-100 text-blue-500 px-13 mb-10 py-2 rounded-full shadow-lg">
+            <a href="../html/all_doctors.html">more</a>
+        </button>
+    </div>
+
+    <div class="mt-8 mb-10 bg-blue-400 w-[65%] lg:flex m-auto block justify-center rounded-lg shadow-lg px-20">
+        <div class="flex flex-col justify-center lg:w-[50%] text-center lg:text-start m-auto">
+            <h1 class="font-bold text-[40px] text-white">Book Appointment With 100+ Trusted Doctors</h1>
+
+            <div class="mt-8">
+                <button class="bg-white rounded-full px-3 py-2 cursor-pointer" id="book"><a href="#speciality">Create Account</a><i class="bi bi-arrow-right ms-3"></i></button>
+            </div>
+        </div>
+
+        <div>
+            <img class="m-auto" src="../images/appointment_img-DzbZlMsi.png" alt="doctors" width="300">
+        </div>
+    </div>
+
+     <div id="footer-box" class="mt-18"></div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
