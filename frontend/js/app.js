@@ -130,7 +130,7 @@ async function deleteOldAppointments(api) {
         console.log(msg);
     }
 }
-const api = "http://docbooking.infinityfreeapp.com//api/paginateDoc";
+const api = "http://127.0.0.1:8000//api/paginateDoc";
 
 available();
 
