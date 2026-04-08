@@ -120,7 +120,7 @@ fetch('../html/navBar.html')
 
       });
 
-const doc_api = "https://3ce353abbeccd1.lhr.life/api/home";
+const doc_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/home";
 
 const choose_doc = document.querySelector("#choose");
 const form = document.querySelector('#chooseForm');

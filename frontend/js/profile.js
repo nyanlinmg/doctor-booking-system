@@ -106,7 +106,7 @@ fetch('../html/navBar.html')
 
       });
 
-const api = "https://3ce353abbeccd1.lhr.life/api/create";
+const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/create";
 
 const urlParams = new URLSearchParams(window.location.search);
 const user_id = urlParams.get('id');
@@ -117,7 +117,7 @@ fetch(`${api}/${user_id}`, {method: 'GET'})
     data => {
         console.log(data);
         console.log(data.image_url);
-        document.querySelector("#image").setAttribute('src', `https://3ce353abbeccd1.lhr.life${data.image_url}`);
+        document.querySelector("#image").setAttribute('src', `https://3748e8650932be77-210-14-107-177.serveusercontent.com${data.image_url}`);
 
         document.querySelector("#userName").textContent = data.user.name;
         document.querySelector("#email").innerHTML = `

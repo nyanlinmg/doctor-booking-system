@@ -102,7 +102,7 @@ fetch('../html/navBar.html')
 
       });
 
-const api = "https://3ce353abbeccd1.lhr.life/api/create";
+const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/create";
 
 const urlParams = new URLSearchParams(window.location.search);
 const user_id = urlParams.get('id');
