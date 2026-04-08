@@ -92,7 +92,7 @@ fetch('../html/navBar.html')
 
       });
 
-const api = "http://127.0.0.1:8000/api/doctor_login";
+const api = "https://3ce353abbeccd1.lhr.life/api/doctor_login";
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();

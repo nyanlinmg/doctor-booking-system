@@ -62,7 +62,7 @@ fetch('../html/navBar.html')
 
       });
 
-const api = "http://127.0.0.1:8000/api/admin_login";
+const api = "https://3ce353abbeccd1.lhr.life/api/admin_login";
 
 form.addEventListener('submit', e => {
     e.preventDefault();

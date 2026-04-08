@@ -120,7 +120,7 @@ fetch('../html/navBar.html')
 
       });
 
-const doc_api = "http://127.0.0.1:8000/api/home";
+const doc_api = "https://3ce353abbeccd1.lhr.life/api/home";
 
 const choose_doc = document.querySelector("#choose");
 const form = document.querySelector('#chooseForm');
