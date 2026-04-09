@@ -136,11 +136,11 @@ fetch('../html/navBar.html')
 
       });
 
-const doc_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/home";
-const app_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/make";
-const user_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/create";
-const latest_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/getLatestAppointments";
-const del_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/delOldAppointments";
+const doc_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/home";
+const app_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/make";
+const user_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/create";
+const latest_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/getLatestAppointments";
+const del_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/delOldAppointments";
 
 const total_doc = document.querySelector("#total_doc");
 const total_app = document.querySelector("#total_appointment");
@@ -199,7 +199,7 @@ function latestBooking(data,show){
         let time = document.createElement('h1');
 
         div.classList.add('py-4', 'px-5', 'item-center', 'gap-5', 'md:flex');
-        img.setAttribute('src', `https://3748e8650932be77-210-14-107-177.serveusercontent.com${element.doctor.image}`);
+        img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${element.doctor.image}`);
         img.setAttribute('width','50');
         img.classList.add('rounded-full','bg-blue-50');
 
@@ -439,7 +439,7 @@ doc_list.addEventListener('click', () => {
     page4.textContent = "";
     page4.classList.add('gap-6','py-6', 'px-5' ,'flex', 'flex-wrap');
 
-    const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/home";
+    const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/home";
 
     fetch(api, {method: 'GET'})
     .then(response => response.json())
@@ -458,7 +458,7 @@ function create(data){
             let doc_speciality = document.createElement('h1');
             card.classList.add('border');
 
-            img.setAttribute('src', `https://3748e8650932be77-210-14-107-177.serveusercontent.com${data[i].image}`);
+            img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${data[i].image}`);
             img.classList.add('w-[100%]', 'h-60' ,'bg-blue-200', 'object-cover');
             card.classList.add('border', 'border-blue-500','rounded-lg', 'cursor-pointer', 'overflow-hidden', 'hover:translate-y-[-8px]', 'transition', 'duration-100', 'shadow-lg', 'w-[280px]');
 
@@ -534,7 +534,7 @@ async function addDoctorSchedule(value, schedules) {
     console.log(value);
     console.log(schedules);
 
-    const book_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/bookingSlot";
+    const book_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/bookingSlot";
 
     try{
 
@@ -571,7 +571,7 @@ function choose(data) {
 }
 
 const user_list = document.querySelector("#user_list");
-const paginateApi = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/paginateUser";
+const paginateApi = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/paginateUser";
 let currentPage = 1;
 let lastPage = 1;
 let prevBtn, nextBtn, span;
@@ -644,7 +644,7 @@ async function fetchUsers(page){
 
         box1.innerHTML = `
             <div class="flex flex-wrap gap-6 ms-2">
-                <img class="w-[80px] h-[80px] rounded-full" src="https://3748e8650932be77-210-14-107-177.serveusercontent.com${user.image}"></img>
+                <img class="w-[80px] h-[80px] rounded-full" src="https://bd2c317f64074041-210-14-108-162.serveusercontent.com${user.image}"></img>
                 <div>   
                     <div>#${user.id}. <b class="text-[15px]">${user.name}</b></div>
                     <div class="text-[15px]">age : ${age}</div>

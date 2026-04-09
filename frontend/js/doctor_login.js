@@ -92,7 +92,7 @@ fetch('../html/navBar.html')
 
       });
 
-const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/doctor_login";
+const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/doctor_login";
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();

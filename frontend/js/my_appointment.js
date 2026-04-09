@@ -2,7 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const user_id = urlParams.get('user_id');
 
-const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/make";
+const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/make";
 if(user_id){
     get_appointment(user_id,api);
 }
@@ -130,7 +130,7 @@ async function get_appointment(id,api) {
 
             div.classList.add('border-b-gray-400', 'border-b-2', 'py-4', 'block', 'gap-3' ,'md:flex')
 
-            img.setAttribute('src', `https://3748e8650932be77-210-14-107-177.serveusercontent.com${element.doctor.image}`);
+            img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${element.doctor.image}`);
             img.classList.add('w-[200px]', 'bg-blue-100',)
             doc_info.classList.add('w-[100%]', 'py-1');
             name.textContent = element.doctor.name;
@@ -214,8 +214,8 @@ function payAmount(id, fees, doc_id) {
         window.alert(`Your amount is exceed $ ${fees} , plz enter exact amount`);
     }else {
 
-        let payment_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/change_payment";
-        let earnings_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/change_earnings";
+        let payment_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/change_payment";
+        let earnings_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/change_earnings";
 
         fetch(`${payment_api}/${id}`,
             {

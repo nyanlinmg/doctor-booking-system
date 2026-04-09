@@ -120,7 +120,7 @@ fetch('../html/navBar.html')
 
       });
 
-const doc_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/home";
+const doc_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/home";
 
 const choose_doc = document.querySelector("#choose");
 const form = document.querySelector('#chooseForm');

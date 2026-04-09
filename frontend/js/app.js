@@ -110,7 +110,7 @@ fetch('../html/navBar.html')
         });
       });
 
-const del_api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/delOldAppointments";
+const del_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/delOldAppointments";
 
 window.onload = async function() {
     await deleteOldAppointments(del_api);
@@ -130,7 +130,7 @@ async function deleteOldAppointments(api) {
         console.log(msg);
     }
 }
-const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/paginateDoc";
+const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/paginateDoc";
 
 available();
 
@@ -158,7 +158,7 @@ async function available() {
             if(doc.available == 1){
                 div.innerHTML = `
                     <a href="../html/doc_detail.html?doc_id=${doc.id}">
-                        <img src="https://3748e8650932be77-210-14-107-177.serveusercontent.com${doc.image}" alt="doc-1" class="w-[100%] h-70 object-cover bg-blue-200">
+                        <img src="https://bd2c317f64074041-210-14-108-162.serveusercontent.com${doc.image}" alt="doc-1" class="w-[100%] h-70 object-cover bg-blue-200">
                         <div class="flex justify-start items-center ms-2 mt-5 mb-2">
                             <i id="available" class="bi bi-circle-fill text-green-400 text-[10px]"></i>
                             <p id="available_text" class="text-[14px] ms-2 text-green-700">Available</p>
@@ -171,7 +171,7 @@ async function available() {
             }else{
                 div.innerHTML = `
                     <a href="../html/doc_detail.html?doc_id=${doc.id}">
-                        <img src="https://3748e8650932be77-210-14-107-177.serveusercontent.com${doc.image}" alt="doc-1" class="w-[100%]">
+                        <img src="https://bd2c317f64074041-210-14-108-162.serveusercontent.com${doc.image}" alt="doc-1" class="w-[100%]">
                         <div class="flex justify-start items-center ms-2 mt-5 mb-2">
                             <i class="bi bi-circle-fill text-red-400 text-[10px]"></i>
                             <small class="text-[14px] ms-2 text-red-700">Unavailable</small>

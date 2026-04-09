@@ -4,7 +4,7 @@ const loading = document.querySelector("#loader");
 
 window.alert("You have to login to view your profile....!!!");
 
-const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/login";
+const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/login";
 
 fetch('../html/navBar.html')
       .then(response => response.text())

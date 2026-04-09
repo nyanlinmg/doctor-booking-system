@@ -106,7 +106,7 @@ fetch('../html/navBar.html')
 
       });
 
-const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/home";
+const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/home";
 const show_box = document.querySelector("#show_doc");
 const speciality = document.querySelectorAll("#speciality");
 
@@ -140,7 +140,7 @@ function create(data){
             let doc_speciality = document.createElement('h1');
             console.log(data[i]);
 
-            img.setAttribute('src', `https://3748e8650932be77-210-14-107-177.serveusercontent.com${data[i].image}`);
+            img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${data[i].image}`);
             img.classList.add('w-[100%]', 'h-60' ,'object-cover' ,'bg-blue-200');
             card.classList.add('border', 'border-blue-500','rounded-lg', 'cursor-pointer', 'overflow-hidden', 'hover:translate-y-[-8px]', 'transition', 'duration-100', 'shadow-lg', 'm-auto','sm:w-[100%]');
             show_box.classList.add('grid', 'lg:grid-cols-4', 'gap-5', 'md:grid-cols-3', 'sm:grid-cols-2');
@@ -190,7 +190,7 @@ for(let i = 0; i < speciality.length; i++){
 }
 
 async function show(id) {
-    const api = "https://3748e8650932be77-210-14-107-177.serveusercontent.com/api/related_doctors";
+    const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/related_doctors";
     try{
 
         let response = await fetch(`${api}/${id+1}`, {method: "GET"});
@@ -210,7 +210,7 @@ async function show(id) {
             let doc_speciality = document.createElement('h1');
             console.log(data[i]);
 
-            img.setAttribute('src', `https://3748e8650932be77-210-14-107-177.serveusercontent.com${data[i].image}`);
+            img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${data[i].image}`);
             img.classList.add('w-[100%]','h-60' ,'object-cover', 'bg-blue-200');
             card.classList.add('border', 'border-blue-500','rounded-lg', 'cursor-pointer', 'overflow-hidden', 'hover:translate-y-[-8px]', 'transition', 'duration-100', 'shadow-lg', 'w-[300px]', 'm-auto', 'sm:w-[100%]');
             show_box.classList.add('grid', 'lg:grid-cols-4', 'gap-5', 'md:grid-cols-3', 'sm:grid-cols-2');
