@@ -112,8 +112,8 @@ fetch('../html/navBar.html')
 
 const show_box = document.querySelector("#show_box");
 const profile = document.querySelector("#profile");
-const doc_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/home";
-const available_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/change_available";
+const doc_api = "http://127.0.0.1:8000/api/home";
+const available_api = "http://127.0.0.1:8000/api/change_available";
 
 const urlParams = new URLSearchParams(window.location.search);
 const doc_id = urlParams.get('id');
@@ -129,7 +129,7 @@ profile.addEventListener("click", () => {
         div.classList.add('px-4', 'py-2');
         let img = document.createElement('img');
 
-        img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${data.image}`);
+        img.setAttribute('src', `http://127.0.0.1:8000${data.image}`);
         img.classList.add('rounded-lg', 'bg-blue-50', 'w-[250px]')
 
         let info_box = document.createElement('div');
@@ -197,8 +197,8 @@ profile.addEventListener("click", () => {
 })
 
 let appointments = document.querySelector("#appointments");
-const doc_appointments_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/doc_appointments";
-const action_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/make_action";
+const doc_appointments_api = "http://127.0.0.1:8000/api/doc_appointments";
+const action_api = "http://127.0.0.1:8000/api/make_action";
 let btnBox;
 let btnBox2;
 
@@ -285,7 +285,7 @@ appointments.addEventListener('click', () => {
             let age = getAge(element.user.birthday);
 
             let img = document.createElement('img');
-            img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${element.user.image}`);
+            img.setAttribute('src', `http://127.0.0.1:8000${element.user.image}`);
             img.classList.add('w-[150px]', 'rounded-lg', 'h-[100px]');
 
             let name = document.createElement('div');
@@ -322,7 +322,7 @@ appointments.addEventListener('click', () => {
                 <td class="py-4 ps-3">${count++}</td>
                 <td>
                     <div class="flex items-center gap-3">
-                            <img class="w-[40px] h-[40px] rounded-full" src="https://bd2c317f64074041-210-14-108-162.serveusercontent.com${element.user.image}" alt="image">
+                            <img class="w-[40px] h-[40px] rounded-full" src="http://127.0.0.1:8000${element.user.image}" alt="image">
                             <small class="font-bold text-[13px]">${element.user.name}</small>
                     </div>
                 </td>
@@ -486,8 +486,8 @@ dashboard.onclick = () => {
     show_box.appendChild(latestBox);
 }
 
-const user_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/get_user";
-const latest_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/latest_appointments";
+const user_api = "http://127.0.0.1:8000/api/get_user";
+const latest_api = "http://127.0.0.1:8000/api/latest_appointments";
 
 async function loadAllData() {
     
@@ -527,7 +527,7 @@ function latestAppointments(result,show) {
         let action = document.createElement('div');
 
         div.classList.add('py-4', 'px-5', 'item-center', 'gap-5', 'md:flex');
-        img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${element.user.image}`);
+        img.setAttribute('src', `http://127.0.0.1:8000${element.user.image}`);
         img.setAttribute('width','50');
         img.classList.add('rounded-full','bg-blue-50');
 

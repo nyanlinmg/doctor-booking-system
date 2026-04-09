@@ -118,8 +118,8 @@ fetch('../html/navBar.html')
 const urlParams = new URLSearchParams(window.location.search);
 const doc_id = urlParams.get('doc_id');
 
-const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/home";
-const related_doc_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/related_doctors";
+const api = "http://127.0.0.1:8000/api/home";
+const related_doc_api = "http://127.0.0.1:8000/api/related_doctors";
 
 if(doc_id){
      receive_docData(api, doc_id);
@@ -140,7 +140,7 @@ async function receive_docData(api , doc_id) {
         specialityId = data.speciality_id;
         related_doc(specialityId);
 
-        doc_img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${data.image}`);
+        doc_img.setAttribute('src', `http://127.0.0.1:8000${data.image}`);
         doc_img.classList.add('w-80', 'rounded-lg')
         doc_name.textContent = data.name;
         doc_name.classList.add("text-[25px]", "font-bold");
@@ -162,7 +162,7 @@ async function receive_docData(api , doc_id) {
 }
 
 function receive_day(doc_id) {
-        const schedule_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/getSchedule";
+        const schedule_api = "http://127.0.0.1:8000/api/getSchedule";
 
         const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
         // const todayIndex = new Date().getDay();
@@ -243,7 +243,7 @@ async function show_time(id, api,day_text, date_text, doc_id, month) {
 
                         book_btn.addEventListener('click', () => {
                             let id = localStorage.getItem('id');
-                            const make_api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/make";
+                            const make_api = "http://127.0.0.1:8000/api/make";
                             
                             make_appointment(id,doc_id,day_text,date_text,make_api,time, month);
                         });
@@ -333,7 +333,7 @@ async function related_doc(speciality_id) {
 
                 let img = document.createElement('img');
                 
-                img.setAttribute('src', `https://bd2c317f64074041-210-14-108-162.serveusercontent.com${data[i].image}`);
+                img.setAttribute('src', `http://127.0.0.1:8000${data[i].image}`);
                 img.setAttribute('alt', `img${i+1}`);
                 img.classList.add('w-[250px]', 'bg-blue-200');
 

@@ -1,7 +1,7 @@
 const form = document.querySelector("form");
 const show = document.querySelector(".show_after_create");
 
-const api = "https://bd2c317f64074041-210-14-108-162.serveusercontent.com/api/create";
+const api = "http://127.0.0.1:8000/api/create";
 
 fetch('../html/navBar.html')
       .then(response => response.text())
